@@ -1,0 +1,8 @@
+--- mediaserver.te
++++ mediaserver.te
+@@ -138,4 +138,4 @@
+ neverallow mediaserver { file_type fs_type }:file execute_no_trans;
+ 
+ # do not allow privileged socket ioctl commands
+-neverallowxperm mediaserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
++#neverallowxperm mediaserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
